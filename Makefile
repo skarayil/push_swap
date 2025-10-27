@@ -6,7 +6,7 @@ CFLAGS      = -Wall -Wextra -Werror
 INCLUDES    = -I./include -I./library/libft -I./library/printf -I./bonus/include
 
 SRC_DIR     = sources
-BONUS_DIR   = bonus/source
+BONUS_DIR   = bonus/sources
 OBJ_DIR     = objects
 BONUS_OBJ_DIR = object_bonus
 
@@ -32,13 +32,13 @@ SRCS        = $(SRC_DIR)/main.c \
 
 BONUS_SRCS  = $(BONUS_DIR)/checker.c \
 			  $(BONUS_DIR)/utils.c \
+              $(BONUS_DIR)/swap_bonus.c \
+              $(BONUS_DIR)/push_bonus.c \
+              $(BONUS_DIR)/rotate_bonus.c \
+              $(BONUS_DIR)/rev_rotate_bonus.c \
               $(SRC_DIR)/array.c \
               $(SRC_DIR)/parsing.c \
-              $(SRC_DIR)/push.c \
-              $(SRC_DIR)/rev_rotate.c \
-              $(SRC_DIR)/rotate.c \
-              $(SRC_DIR)/stack.c \
-              $(SRC_DIR)/swap.c
+              $(SRC_DIR)/stack.c 
 
 OBJS        = $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 BONUS_OBJS  = $(BONUS_SRCS:$(SRC_DIR)/%.c=$(BONUS_OBJ_DIR)/%.o)

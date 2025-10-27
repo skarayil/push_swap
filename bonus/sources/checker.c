@@ -6,11 +6,14 @@
 /*   By: skarayil <skarayil@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/24 11:16:49 by skarayil          #+#    #+#             */
-/*   Updated: 2025/10/24 12:22:40 by skarayil         ###   ########.fr       */
+/*   Updated: 2025/10/27 22:38:52 by skarayil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../bonus/include/push_swap_bonus.h"
+#include "get_next_line.h"
+#include "ft_printf.h"
+#include "libft.h"
+#include "push_swap_bonus.h"
 
 static int	ft_equal(const char *line, const char *op)
 {

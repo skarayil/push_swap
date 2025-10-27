@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: skarayil <skarayil@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/21 16:44:08 by skarayil          #+#    #+#             */
-/*   Updated: 2025/10/27 22:04:50 by skarayil         ###   ########.fr       */
+/*   Created: 2025/10/27 21:59:39 by skarayil          #+#    #+#             */
+/*   Updated: 2025/10/27 22:00:50 by skarayil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,17 @@ void	ft_sa(t_data *data, int print)
 		ft_printf("sa\n");
 }
 
+void	ft_sb(t_data *data, int print)
+{
+	ft_swap(&data->stack_b, data->size_b);
+	if (print)
+		ft_printf("sb\n");
+}
+
+void	ft_ss(t_data *data, int print)
+{
+	ft_swap(&data->stack_a, data->size_a);
+	ft_swap(&data->stack_b, data->size_b);
+	if (print)
+		ft_printf("ss\n");
+}

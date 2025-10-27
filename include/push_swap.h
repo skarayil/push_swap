@@ -6,7 +6,7 @@
 /*   By: skarayil <skarayil@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/24 11:02:46 by skarayil          #+#    #+#             */
-/*   Updated: 2025/10/24 12:22:06 by skarayil         ###   ########.fr       */
+/*   Updated: 2025/10/27 22:03:39 by skarayil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,12 +53,9 @@ void				ft_pa(t_data *data, int print);
 void				ft_pb(t_data *data, int print);
 void				ft_rra(t_data *data, int print);
 void				ft_rrb(t_data *data, int print);
-void				ft_rrr(t_data *data, int print);
 void				ft_ra(t_data *data, int print);
 void				ft_rb(t_data *data, int print);
 void				ft_rr(t_data *data, int print);
 void				ft_sa(t_data *data, int print);
-void				ft_sb(t_data *data, int print);
-void				ft_ss(t_data *data, int print);
 
 #endif

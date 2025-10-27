@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rev_rotate.c                                       :+:      :+:    :+:   */
+/*   rev_rotate_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skarayil <skarayil@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/21 16:44:20 by skarayil          #+#    #+#             */
-/*   Updated: 2025/10/27 22:04:22 by skarayil         ###   ########.fr       */
+/*   Created: 2025/10/27 21:59:33 by skarayil          #+#    #+#             */
+/*   Updated: 2025/10/27 22:39:08 by skarayil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,3 +47,10 @@ void	ft_rrb(t_data *data, int print)
 		ft_printf("rrb\n");
 }
 
+void	ft_rrr(t_data *data, int print)
+{
+	ft_rev_rotate(&data->stack_a, data->size_a);
+	ft_rev_rotate(&data->stack_b, data->size_b);
+	if (print)
+		ft_printf("rrr\n");
+}
