@@ -6,7 +6,7 @@
 /*   By: skarayil <skarayil@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/24 11:16:49 by skarayil          #+#    #+#             */
-/*   Updated: 2025/10/27 23:06:39 by skarayil         ###   ########.fr       */
+/*   Updated: 2025/10/28 23:58:07 by skarayil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,15 @@ static int	ft_equal(const char *line, const char *op)
 	return (ft_strncmp(line, op, len) == 0);
 }
 
-static void	ft_executer(t_data *data, char *line)
+// checker.c içine (ft_executer'ı da güncellemen GEREK)
+
+// Önce ft_executer'ı int döndürecek şekilde GÜNCELLE
+// Bu, geçersiz komutta "Error" vermeden önce 'line' değişkenini free etmemizi sağlar.
+static int	ft_apply_exec(t_data *data, char *line)
 {
+	// "Enter"a basılırsa (boş satır) görmezden gel
+	if (ft_equal(line, ""))
+		return (1);
 	if (ft_equal(line, "pa"))
 		ft_pa(data, 0);
 	else if (ft_equal(line, "pb"))
@@ -56,25 +63,33 @@ static void	ft_executer(t_data *data, char *line)
 	else if (ft_equal(line, "rrr"))
 		ft_rrr(data, 0);
 	else
-		ft_error_exit(data);
+		return (0); // Geçersiz komut = HATA
+	return (1); // Başarılı
 }
 
+// ŞİMDİ ft_checker'ı DÜZELT
 static void	ft_checker(t_data *data)
 {
-	size_t	i;
 	char	*line;
+	int		status;
 
-	i = 0;
-	line = get_next_line(0);
-	while (line[i])
+	line = get_next_line(0); // İlk satırı oku
+	while (line) // Satır NULL olmadığı sürece dön
 	{
-		if (!(line[i] != ' ' && line[i] != '\t' && line[i] != '\n'
-				&& line[i] != '\r'))
-			ft_executer(data, line);
-		free(line);
-		line = get_next_line(0);
-		i++;
+		status = ft_apply_exec(data, line); // Komutu uygula
+
+		// Eğer komut geçersizse (status == 0)
+		if (status == 0)
+		{
+			free(line); // LEAK'i önle
+			ft_error_exit(data); // Hata ver
+		}
+
+		free(line); // Satırı free et
+		line = get_next_line(0); // YENİ satırı oku
 	}
+
+	// Döngü bitti (girdi sonlandı)
 	if (ft_is_sorted(data->stack_a) && !data->stack_b)
 		write(1, "OK\n", 3);
 	else
