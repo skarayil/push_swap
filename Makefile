@@ -31,14 +31,14 @@ SRCS        = $(SRC_DIR)/main.c \
               $(SRC_DIR)/swap.c
 
 BONUS_SRCS  = $(BONUS_DIR)/checker.c \
-			  $(BONUS_DIR)/utils.c \
+			  $(BONUS_DIR)/utils_bonus.c \
               $(BONUS_DIR)/swap_bonus.c \
               $(BONUS_DIR)/push_bonus.c \
               $(BONUS_DIR)/rotate_bonus.c \
               $(BONUS_DIR)/rev_rotate_bonus.c \
-              $(SRC_DIR)/array.c \
-              $(SRC_DIR)/parsing.c \
-              $(SRC_DIR)/stack.c 
+              $(SRC_DIR)/array_bonus.c \
+              $(SRC_DIR)/parsing_bonus.c \
+              $(SRC_DIR)/stack_bonus.c 
 
 OBJS        = $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 BONUS_OBJS  = $(BONUS_SRCS:$(SRC_DIR)/%.c=$(BONUS_OBJ_DIR)/%.o)

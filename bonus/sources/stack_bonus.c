@@ -6,7 +6,7 @@
 /*   By: skarayil <skarayil@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 22:33:27 by skarayil          #+#    #+#             */
-/*   Updated: 2025/10/27 22:33:34 by skarayil         ###   ########.fr       */
+/*   Updated: 2025/10/28 22:56:27 by skarayil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,38 @@ void	ft_stack_clear(t_stack **stack)
 		curr = next;
 	}
 	*stack = NULL;
+}
+
+void	ft_stack_add_back(t_stack **stack, t_stack *new)
+{
+	t_stack	*last;
+
+	if (!stack || !new)
+		return ;
+	new->next = NULL;
+	new->prev = NULL;
+	if (!*stack)
+	{
+		*stack = new;
+		return ;
+	}
+	last = *stack;
+	while (last->next)
+		last = last->next;
+	last->next = new;
+	new->prev = last;
+}
+
+t_stack	*ft_stack_new(int value)
+{
+	t_stack	*new;
+
+	new = malloc(sizeof(t_stack));
+	if (!new)
+		return (NULL);
+	new->value = value;
+	new->index = 0;
+	new->next = NULL;
+	new->prev = NULL;
+	return (new);
 }
