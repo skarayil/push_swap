@@ -6,7 +6,7 @@
 /*   By: skarayil <skarayil@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/21 16:44:20 by skarayil          #+#    #+#             */
-/*   Updated: 2025/10/27 22:04:22 by skarayil         ###   ########.fr       */
+/*   Updated: 2025/10/28 09:58:12 by skarayil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,3 @@ void	ft_rrb(t_data *data, int print)
 	if (print)
 		ft_printf("rrb\n");
 }
-

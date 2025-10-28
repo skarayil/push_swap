@@ -6,7 +6,7 @@
 /*   By: skarayil <skarayil@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/21 16:44:08 by skarayil          #+#    #+#             */
-/*   Updated: 2025/10/27 22:04:50 by skarayil         ###   ########.fr       */
+/*   Updated: 2025/10/28 09:58:03 by skarayil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,3 @@ void	ft_sa(t_data *data, int print)
 	if (print)
 		ft_printf("sa\n");
 }
-
