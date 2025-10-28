@@ -6,7 +6,7 @@
 /*   By: skarayil <skarayil@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 13:10:12 by skarayil          #+#    #+#             */
-/*   Updated: 2025/10/28 22:56:40 by skarayil         ###   ########.fr       */
+/*   Updated: 2025/10/29 00:28:25 by skarayil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ int		*ft_parse_numbers(int ac, char **av, int *count);
 int		ft_is_number(char *str);
 int		ft_is_duplicate(t_stack *stack, int value);
 int		*ft_sort_array(t_stack *stack, int size);
+int		ft_apply_exec(t_data *data, char *line);
 long	ft_atol(const char *nptr);
 t_stack	*ft_stack_new(int value);
 

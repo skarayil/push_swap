@@ -31,6 +31,7 @@ SRCS        = $(SRC_DIR)/main.c \
               $(SRC_DIR)/swap.c
 
 BONUS_SRCS  = $(BONUS_DIR)/checker.c \
+			  $(BONUS_DIR)/executer.c \
 			  $(BONUS_DIR)/utils_bonus.c \
               $(BONUS_DIR)/swap_bonus.c \
               $(BONUS_DIR)/push_bonus.c \

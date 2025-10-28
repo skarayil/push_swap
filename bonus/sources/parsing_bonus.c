@@ -6,7 +6,7 @@
 /*   By: skarayil <skarayil@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 22:21:19 by skarayil          #+#    #+#             */
-/*   Updated: 2025/10/28 23:47:06 by skarayil         ###   ########.fr       */
+/*   Updated: 2025/10/29 00:32:37 by skarayil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,23 @@
 static int	ft_validate(int *nums, char *str, int index)
 {
 	long	num;
+	int		i;
 
 	if (!ft_is_number(str))
 		return (0);
 	num = ft_atol(str);
+	if (num == 0)
+	{
+		i = 0;
+		if (str[i] == '+' || str[i] == '-')
+			i++;
+		while (str[i])
+		{
+			if (str[i] != '0')
+				return (0);
+			i++;
+		}
+	}
 	nums[index] = (int)num;
 	return (1);
 }
