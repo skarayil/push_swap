@@ -6,15 +6,13 @@
 /*   By: skarayil <skarayil@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 14:34:42 by skarayil          #+#    #+#             */
-/*   Updated: 2025/10/29 15:49:42 by skarayil         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:35:04 by skarayil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "push_swap.h"
-#include <limits.h>
 #include <stdlib.h>
-#include <unistd.h>
 
 static int	ft_validate(int *nums, char *str, int index)
 {
@@ -24,8 +22,6 @@ static int	ft_validate(int *nums, char *str, int index)
 	if (!ft_is_number(str))
 		return (0);
 	num = ft_atol(str);
-	if (num > INT_MAX || num < INT_MIN)
-		return (0);
 	if (num == 0)
 	{
 		i = 0;
