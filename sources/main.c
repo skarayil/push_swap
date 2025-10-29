@@ -6,14 +6,13 @@
 /*   By: skarayil <skarayil@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/24 09:35:50 by skarayil          #+#    #+#             */
-/*   Updated: 2025/10/29 15:19:29 by skarayil         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:32:29 by skarayil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "push_swap.h"
 #include <stdlib.h>
-#include <unistd.h>
 
 static void	ft_initialize_stack(t_data *data, int ac, char **av)
 {
