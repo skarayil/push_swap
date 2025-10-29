@@ -6,7 +6,7 @@
 /*   By: skarayil <skarayil@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 14:34:42 by skarayil          #+#    #+#             */
-/*   Updated: 2025/10/21 18:15:49 by skarayil         ###   ########.fr       */
+/*   Updated: 2025/10/29 15:49:42 by skarayil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,30 @@
 #include "push_swap.h"
 #include <limits.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 static int	ft_validate(int *nums, char *str, int index)
 {
 	long	num;
+	int		i;
 
 	if (!ft_is_number(str))
 		return (0);
 	num = ft_atol(str);
+	if (num > INT_MAX || num < INT_MIN)
+		return (0);
+	if (num == 0)
+	{
+		i = 0;
+		if (str[i] == '+' || str[i] == '-')
+			i++;
+		while (str[i])
+		{
+			if (str[i] != '0')
+				return (0);
+			i++;
+		}
+	}
 	nums[index] = (int)num;
 	return (1);
 }
@@ -101,6 +117,8 @@ int	*ft_parse_numbers(int ac, char **av, int *count)
 	if (ac == 2 && ft_strchr(av[1], ' '))
 		nums = ft_single(av[1], count);
 	else
+	{
 		nums = ft_multiple(ac, av, count);
+	}
 	return (nums);
 }
