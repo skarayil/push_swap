@@ -6,12 +6,11 @@
 /*   By: skarayil <skarayil@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/24 11:16:49 by skarayil          #+#    #+#             */
-/*   Updated: 2025/10/29 00:30:31 by skarayil         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:27:25 by skarayil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-#include "ft_printf.h"
 #include "libft.h"
 #include "push_swap_bonus.h"
 
