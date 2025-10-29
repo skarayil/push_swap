@@ -6,13 +6,12 @@
 /*   By: skarayil <skarayil@student.42kocaeli>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 22:21:19 by skarayil          #+#    #+#             */
-/*   Updated: 2025/10/29 15:28:50 by skarayil         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:28:44 by skarayil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "push_swap_bonus.h"
-#include <limits.h>
 #include <stdlib.h>
 
 static int	ft_validate(int *nums, char *str, int index)
